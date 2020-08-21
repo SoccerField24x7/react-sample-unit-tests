@@ -43,6 +43,18 @@ describe("<Todo /> component unit tests", () => {
         expect(mockFn).toHaveBeenCalledTimes(1);
     });
 
+    //// only to "focus"
+    // it.only('should set props correctly', () => {
+    //     component.setProps({ text: 'Hello'});
+    //     expect(component.props().children).toEqual('Hello');
+    // });
+
+    //// skip to "skip"
+    it.skip('should call onClick handler when Todo component is clicked', () => {
+        component.simulate('click');
+        expect(mockFn).toHaveBeenCalledTimes(1);
+    });
+
     it('should set props correctly', () => {
         component.setProps({ text: 'Hello'});
         expect(component.props().children).toEqual('Hello');
