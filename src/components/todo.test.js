@@ -31,6 +31,18 @@ describe("<Todo /> component unit tests", () => {
         expect(component.props().children).toEqual('buy milk');
     });
 
+    //// fit to "focus"
+    // fit('should set props correctly', () => {
+    //     component.setProps({ text: 'Hello'});
+    //     expect(component.props().children).toEqual('Hello');
+    // });
+
+    //// xit to "skip"
+    xit('should call onClick handler when Todo component is clicked', () => {
+        component.simulate('click');
+        expect(mockFn).toHaveBeenCalledTimes(1);
+    });
+
     it('should set props correctly', () => {
         component.setProps({ text: 'Hello'});
         expect(component.props().children).toEqual('Hello');
